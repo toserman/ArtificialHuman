@@ -1,0 +1,68 @@
+//Register receivers
+this.registerReceiver(this.WifiStateChangedReceiver,new IntentFilter(WifiManager.WIFI_STATE_CHANGED_ACTION));
+this.registerReceiver(this.WifiScanResultReceiver,new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
+
+unregisterReceiver(WifiScanResultReceiver);
+unregisterReceiver(WifiStateChangedReceiver);
+------------------------------------------------------------------------------------------
+// LOG in console
+Log.d("MY ON_CREATE ", "WIFI_STATE_DISABLED" );
+Log.d("MY ON_CREATE STATE = ", Integer.toString(wifiManager.getWifiState() ));    
+-------------------------------------------------------------------------------------------
+ //Print whole list
+ List<ScanResult> listData;
+ for (ScanResult result : listData)    		
+ 	Log.d("MY CSListAdapter CHECK: SSID: ", result.SSID);
+ ----------------------------------------------------
+ 2nd variant
+ //    	for (int i=0; i < list_ap.size();i++)
+//    	{
+//  		  Log.d("MY TAG ", "i = " + Integer.toString(i) + " " + list_ap.get(i).getBSSID());
+//    	}
+-------------------------------------------------------------------------------------------
+// POP-UP WINDOW
+Toast.makeText(getApplicationContext(), "MY WifiScanResultReceiver INSIDE !!!", Toast.LENGTH_LONG).show();
+-------------------------------------------------------------------------------------------
+// Exception
+try {
+	  rowssid_1.setText("MAIN");  
+	} 
+	  catch (Exception e) {
+	  Log.e("ERROR", "ERROR IN CODE" + e.toString());
+	  e.printStackTrace();
+	}
+// Exception
+try {
+	  if(temp < draw_marker);
+	  	throw new Exception();
+	} 
+	  catch (Exception e) {
+	  System.out.println(e.getStackTrace()[0].getMethodName()); // Just print method name where exception was called 
+	  Log.e("ERROR", "ERROR IN CODE" + e.toString());
+	  e.printStackTrace();
+	}
+-------------------------------------------------------------------------------------------
+// Comment lines in XML file
+<!--...--> 
+-------------------------------------------------------------------------------------------
+//Add new jar in project
+ You have two ways to integrate GraphView into your project:
+    Download .jar file and copy it into the /libs folder of your project.
+    GraphView-3.1.1.jar
+    Download or clone the git repository and link your project with the GraphView library project.
+    jjoe64/GraphView on GitHub = https://github.com/jjoe64/GraphView
+-------------------------------------------------------------------------------------------    
+ http://www.edumobile.org/android/android-development/creating-bar-chart-using-graphview/
+ http://android-graphview.org/#doc_valuecolor
+ -------------------------------------------------------------------------------------------
+ //Follow Field Naming Conventions
+ - Non-public, non-static field names start with m.
+ - Static field names start with s.
+ - Other fields start with a lower case letter.
+ - Public static final fields (constants) are ALL_CAPS_WITH_UNDERSCORES.
+ -------------------------------------------------------------------------------------------
+ // IMEI number of Android phone. 
+  	 TelephonyManager mTelephonyMgr = (TelephonyManager)
+     getSystemService(Context.TELEPHONY_SERVICE);
+     String imei = mTelephonyMgr.getDeviceId();
+ 
